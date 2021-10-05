@@ -2,24 +2,26 @@
 
 # Book Store
 
+![image](https://user-images.githubusercontent.com/74506933/136048011-625506da-7ef0-4954-ba8d-3fd6f97da32c.png)
 
 **Additional description about the project and its features.**
 
 ## ⚒️ Built With
 
-`Languages`
+_Languages:_
 
 - HTML
 - CSS
 - Javascript
 
-`Library`
+_Library:_
 
 - React
+- Redux
 
 ## 📡 Live Demo
 
-[Link to Live Demo]()
+[Link to Live Demo](https://donard97.github.io/Bookstore-React-Redux/)
 
 ## 💻 Install
 
