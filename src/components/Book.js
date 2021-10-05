@@ -5,7 +5,7 @@ export default function User(props) {
   const book = props;
   return (
     <>
-      <li key={book.id}>
+      <li className="buttons" key={book.id}>
         {book.category}
         {book.name}
         {book.author}

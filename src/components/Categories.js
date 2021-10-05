@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Container = () => <h4>Categories</h4>;
+const Container = () => <h2>Under Construction</h2>;
 
 export default Container;
