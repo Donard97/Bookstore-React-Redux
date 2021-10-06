@@ -11,11 +11,14 @@ ul {
 }
 
 .menu {
-  display: flex;
-  gap: 1rem;
   font-size: 20px;
   font-weight: 600;
   padding: 1rem;
+}
+
+.menu ul {
+  display: flex;
+  gap: 1rem;
 }
 
 .menu li a {
