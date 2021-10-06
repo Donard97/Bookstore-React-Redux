@@ -1,18 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ id, name, author }) => (
-  <li key={id}>
-    <p>{name}</p>
-    <p>{author}</p>
-    <button type="button">Remove</button>
-  </li>
+const Book = ({ books, propsToRemoveBooks }) => (
+  <ul>
+    {books.map((book) => (
+      <li key={book.id}>
+        <span>{book.title}</span>
+        <br />
+        <span>by</span>
+        <br />
+        <span>{book.author}</span>
+        <br />
+        <button type="button" onClick={() => propsToRemoveBooks(book.id)}>Remove</button>
+      </li>
+    ))}
+  </ul>
 );
 
 Book.propTypes = {
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  books: PropTypes.instanceOf(Array).isRequired,
+  propsToRemoveBooks: PropTypes.func.isRequired,
 };
 
 export default Book;
