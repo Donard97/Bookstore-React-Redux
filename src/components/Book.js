@@ -1,3 +1,4 @@
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
@@ -14,8 +15,8 @@ const Book = ({ book }) => {
     <div>
       <li>
         <p>{book.title}</p>
-        <p>{book.author}</p>
-        <button onClick={() => removeBookFromStore(book.id)} type="button">Remove</button>
+        <p>{book.category}</p>
+        <button onClick={() => removeBookFromStore(book.item_id)} type="button">Remove</button>
       </li>
     </div>
   );
@@ -23,9 +24,9 @@ const Book = ({ book }) => {
 
 Book.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 
