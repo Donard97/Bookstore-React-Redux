@@ -1,29 +1,19 @@
-/* eslint-disable react/jsx-key */
 import React from 'react';
+import { useSelector } from 'react-redux';
+import AddBook from './AddBook';
 import Book from './Book';
 
-const BookList = () => {
-  const books = [
-    {
-      id: 1, name: 'The Power of Now', category: 'Psychology', author: 'Exchart Tolle',
-    },
-    {
-      id: 2, name: 'The Road Less Traveled', category: 'Psychology', author: 'Scott Peck',
-    },
-  ];
+const Books = () => {
+  const books = useSelector((state) => state.booksReducer);
 
   return (
     <ul>
       {books.map((book) => (
-        <Book
-          key={book.id}
-          name={book.name}
-          author={book.author}
-        />
+        <Book key={book.id} book={book} />
       ))}
+      <AddBook />
     </ul>
-
   );
 };
 
-export default BookList;
+export default Books;
