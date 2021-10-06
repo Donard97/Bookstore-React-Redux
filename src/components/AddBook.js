@@ -1,59 +1,36 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../redux/books/books';
 
-const AddBook = (props) => {
-  const [input, setInput] = useState({
-    title: '',
-    author: '',
-  });
+const AddBook = () => {
+  const dispatch = useDispatch();
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
 
-  const onChange = (e) => {
-    setInput({
-      ...input,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const submitBookToStore = (e) => {
     e.preventDefault();
-    if (input.title.trim() && input.author.trim()) {
-      props.propsToAddBooks(input.title, input.author);
-      setInput({
-        title: '',
-        author: '',
-      });
-    }
+    const newBook = {
+      id: uuidv4(), 
+      title: title || 'Things Fall Apart',
+      author: author || 'Chinua Achebe',
+    };
+
+    dispatch(addBook(newBook));
+    setTitle('');
+    setAuthor('');
   };
 
   return (
-    <section>
-      <h2>Add a new book here</h2>
-
-      <form className="form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Book Title"
-          value={input.title}
-          name="title"
-          onChange={onChange}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Book Author"
-          value={input.author}
-          name="author"
-          onChange={onChange}
-          required
-        />
-        <button type="submit" className="submit-btn">Add Book</button>
-      </form>
-    </section>
+    <form onSubmit={submitBookToStore}>
+      <div className="col-auto">
+        <h3>Add Book</h3>
+        <input className="add-book" placeholder="Add Title" value={title} type="text" onChange={(e) => setTitle(e.target.value)} />
+        <input className="add-book" placeholder="Add Author" value={author} type="text" onChange={(e) => setAuthor(e.target.value)} />
+        <button type="submit"> Add Book</button>
+      </div>
+    </form>
   );
-};
-
-AddBook.propTypes = {
-  propsToAddBooks: PropTypes.func.isRequired,
 };
 
 export default AddBook;
