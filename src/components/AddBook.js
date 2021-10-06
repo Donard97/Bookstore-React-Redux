@@ -11,7 +11,7 @@ const AddBook = () => {
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
-      id: uuidv4(), 
+      id: uuidv4(),
       title: title || 'Things Fall Apart',
       author: author || 'Chinua Achebe',
     };
