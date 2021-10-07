@@ -21,7 +21,7 @@ _Library:_
 
 ## 📡 Live Demo
 
-[Link to Live Demo](https://donard97.github.io/)
+[Link to Live Demo](https://donard97.github.io/Bookstore-React-Redux/)
 
 ## 💻 Install
 
