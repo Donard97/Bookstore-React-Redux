@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom';
 const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light m-4">
     <div className="container-fluid">
-      <a className="navbar-brand  fw-bold" href="/">
-        <Link className="nav-link" to="/">
+        <Link className="navbar-brand  fw-bold" to="/">
           <h4 className="rangi"> Bookstore CMS </h4>
         </Link>
-      </a>
       <div className="collapse navbar-collapse" id="navbarText">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item m-3 text-black">
