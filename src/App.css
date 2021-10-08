@@ -1,35 +1,224 @@
-* {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Slab&display=swap");
+
+body {
+  margin: 0;
+  padding: 10px;
+  background: #f5f6fa;
+  font-family: "Roboto Slab", serif;
 }
 
-nav h1 {
-  font-size: 2rem;
+.wrapper {
+  width: 85%;
+  margin: auto;
+  background: #fafafa;
 }
 
 ul {
-  list-style-type: none;
-}
-
-.menu {
-  font-size: 20px;
-  font-weight: 600;
-  padding: 1rem;
-}
-
-.menu ul {
-  display: flex;
-  gap: 1rem;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: black;
+  background: #fafafa;
 }
 
 button {
-  margin: 5px;
+  color: #4386bf;
 }
 
-input {
-  margin: 5px;
+.Oval-2 {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-top: 5px solid var(--dodger-blue);
+  border-right: 5px solid var(--dodger-blue);
+  border-bottom: 5px solid var(--dodger-blue);
+  border-left: 5px solid var(--white);
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.flexy {
+  display: flex;
+  border-right: 1px solid gray;
+  margin-top: 1.2rem !important;
+}
+
+.oval {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-color: #0290ff;
+  border-image-source:
+    linear-gradient(
+      to bottom,
+      var(--medium-blue),
+      var(--dodger-blue)
+    );
+  border-image-slice: 1;
+  border-radius: 50%;
+  border-left: 3px solid transparent;
+  transform: rotate(45deg);
+}
+
+.percent {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family:
+    "Montserrat",
+    "Gill Sans",
+    "Gill Sans MT",
+    Calibri,
+    "Trebuchet MS",
+    sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.input {
+  width: 100%;
+  margin-left: 0;
+}
+
+.form {
+  width: 100%;
+  display: inline-flex;
+}
+
+.text-white {
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.details {
+  display: flex !important;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+
+.rangi {
+  color: #0290ff;
+  text-decoration: none;
+}
+
+.bluish {
+  background-color: #0290ff;
+}
+
+.update-btn {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+}
+
+.chapter {
+  margin-left: 1rem;
+}
+
+.currentChapter {
+  width: 8.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.currentLesson {
+  width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 7.813rem 0.25rem 4.688rem;
+  font-family: "Roboto Slab", serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.text-black h3 {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.ms-2 i {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.btn-link {
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.text-secondary {
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
 }
