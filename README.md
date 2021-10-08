@@ -2,7 +2,7 @@
 
 # Book Store
 
-![image](https://user-images.githubusercontent.com/74506933/136048011-625506da-7ef0-4954-ba8d-3fd6f97da32c.png)
+![image](https://user-images.githubusercontent.com/74506933/136474011-f2389c57-827d-4aeb-b005-56c957000568.png)
 
 **Additional description about the project and its features**
 
@@ -23,9 +23,16 @@ _Library:_
 
 [Link to Live Demo](https://donard97.github.io/Bookstore-React-Redux/)
 
-## 💻 Install
+## 💻 Getting Started
+- To get a local copy run the following steps:
+- Copy this link https://github.com/Donard97/Bookstore-React-Redux
+- Open your terminal or command line
+- Run git clone and paste the link
+- Open the folder with your code editor
+- Create a branch to work on
+- Run npm install
+- Run npm start to launch the server.
 
-To clone this repo go to "https://github.com/Donard97/Bookstore-React-Redux"
 
 ## 🙎🏾‍♂️ Author
 
