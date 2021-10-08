@@ -22,12 +22,20 @@ const AddBook = () => {
   };
 
   return (
-    <form onSubmit={submitBookToStore}>
-      <div className="col-auto">
-        <h3>Add Book</h3>
-        <input className="add-book" placeholder="Add Title" value={title} type="text" onChange={(e) => setTitle(e.target.value)} />
-        <input className="add-book" placeholder="Add Category" value={category} type="text" onChange={(e) => setCategory(e.target.value)} />
-        <button type="submit"> Add Book</button>
+    <form onSubmit={submitBookToStore} className="row p-3 input">
+      <div className="row input">
+        <h4 className="text-secondary">ADD NEW BOOK</h4>
+        <div className="form">
+          <div className="col-lg-4 p-2">
+            <input className="form-control" placeholder="Add Title" value={title} type="text" onChange={(e) => setTitle(e.target.value)} />
+          </div>
+          <div className="col-lg-4 p-2">
+            <input className="form-control" placeholder="Add Category" value={category} type="text" onChange={(e) => setCategory(e.target.value)} />
+          </div>
+          <div className="col-lg-4 p-2 d-grid">
+            <button type="submit" className="bg-primary text-white"> Add Book</button>
+          </div>
+        </div>
       </div>
     </form>
   );
